@@ -35,7 +35,7 @@ int Student::getAmountOfCourses() {
 void Student::setAmountOfCourses(int amountOfCoursesChange) {
 	amountOfCourses += amountOfCoursesChange;
 }
-
+// deletes all courses of deleted student as well as the student
 Student::~Student() {
 	for (int i = 0; i < amountOfCourses; i++) {
 		Course* tempCourse = courseHead->getNext();

@@ -4,7 +4,7 @@
 LinkedList::LinkedList(Student* studentHeadIn) {
 	studentHead = studentHeadIn;
 }
-
+// takes student pointer, adds student pointer to the end of linked list // returns  true if works
 bool LinkedList::addStudent(Student* student) {
 	Student* targetStudent = studentHead;
 	studentHead = student;
@@ -14,6 +14,7 @@ bool LinkedList::addStudent(Student* student) {
 	return true;
 }
 
+// takes different course information and the position of the student the course will be given to // returns true if it works
 bool LinkedList::addCourse(std::string courseNameIn, std::string courseCreditIn, std::string courseGradeIn, int studentPos) {
 	Student* targetStudent = studentHead;
 
@@ -29,7 +30,7 @@ bool LinkedList::addCourse(std::string courseNameIn, std::string courseCreditIn,
 
 	return true;
 }
-
+// takes student position, removes found student // returns true if works
 bool LinkedList::removeStudent(int studentPos) {
 	Student* targetStudent = studentHead;
 	Student* tempStudent;
@@ -57,6 +58,7 @@ bool LinkedList::removeStudent(int studentPos) {
 	return true;
 }
 
+// takes position of student and position of the course in the student to be removed // returns true if works
 bool LinkedList::removeCourse(int coursePos, int studentPos) {
 	Student* targetStudent = studentHead;
 	Course* targetCourse = targetStudent->getCourseHead();
@@ -103,7 +105,7 @@ bool LinkedList::removeCourse(int coursePos, int studentPos) {
 
 	return true;
 }
-
+// takes student position // returns found student
 Student* LinkedList::studentAt(int studentPos) {
 	Student* targetStudent = studentHead;
 	if (studentPos > amountOfStudents) {
@@ -117,6 +119,7 @@ Student* LinkedList::studentAt(int studentPos) {
 	return targetStudent;
 }
 
+// takes student position and position of course to be looked for // returns found course
 Course* LinkedList::courseAt(int coursePos, int studentPos) {
 	Student* targetStudent = studentHead;
 	Course* targetCourse = targetStudent->getCourseHead();

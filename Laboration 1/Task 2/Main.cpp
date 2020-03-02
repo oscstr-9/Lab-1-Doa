@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// performes double stack palindrome method
 void stackOnly(string palindrome) {
 	Stack frontStackOnly(palindrome.size());
 	Stack backStackOnly(palindrome.size());
@@ -35,6 +36,7 @@ void stackOnly(string palindrome) {
 	cout << "Word is a palindrome" << endl;
 }
 
+// performes stack and queue palindrome method
 void queueAndStack(string palindrome) {
 	Stack stack(palindrome.size());
 	Queue queue(palindrome.size());
